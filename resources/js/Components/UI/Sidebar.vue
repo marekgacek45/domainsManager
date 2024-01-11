@@ -23,7 +23,7 @@
                <svg class="w-5 h-5 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 5.757v8.486M5.757 10h8.486M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
   </svg>
-               <span class="flex-1 ms-3 whitespace-nowrap">Dodaj Nową</span>
+               <span class="flex-1 ms-3 whitespace-nowrap"></span>
               
             </a>
          </li>
@@ -44,3 +44,10 @@
 </aside>
  </div>
 </template>
+
+<script setup>
+import Create from '../Domains/Create.vue';
+
+
+
+</script>

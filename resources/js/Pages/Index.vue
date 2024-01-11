@@ -8,14 +8,18 @@
             >
                 <Table :domains="domains"></Table>
             </div>
+            <modal :show="showModal"></modal>
+            <button @click="$emit('open')">openModal</button>
         </div>
+        
     </div>
 </template>
 
 <script setup>
 import { onMounted } from "vue";
 import { initFlowbite } from "flowbite";
-import { defineProps } from "vue";
+// import { defineProps } from "vue";
+import { ref } from "vue";
 import "flowbite";
 
 onMounted(() => {
@@ -24,8 +28,15 @@ onMounted(() => {
 
 import Table from "@/Components/Domains/Table.vue";
 import Sidebar from "@/Components/UI/Sidebar.vue";
+import Modal from "@/Components/UI/Modal.vue";
 
 defineProps({
     domains: Array,
 });
+
+
+let showModal = ref(false)
+
+
+
 </script>
