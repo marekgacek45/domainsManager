@@ -1,12 +1,15 @@
 <template>
-    <div v-if="show" class="fixed inset-0 bg-black opacity-50 grid place-items-center">
+    <div v-if="show" class="fixed top-0 right-0 bottom-0 left-0 md:left-64 bg-black opacity-50 grid place-items-center" >
 <div class="bg-white w-[50%]">
 
     <header>header</header>
     
     <div></div>
     
-    <footer>footer</footer>
+    <footer>
+
+        <button @click="$emit('close')">close</button>
+    </footer>
 </div>
     </div>
 </template>

@@ -39,4 +39,5 @@ Route::middleware('auth')->group(function () {
 require __DIR__.'/auth.php';
 
 
-Route::get('/',[DomainController::class,'index']);
+Route::get('/',[DomainController::class,'index'])->name('dashboard');
+Route::get('/create',[DomainController::class,'create']);

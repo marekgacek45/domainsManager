@@ -8,8 +8,8 @@
             >
                 <Table :domains="domains"></Table>
             </div>
-            <modal :show="showModal"></modal>
-            <button @click="$emit('open')">openModal</button>
+            <modal :show="showModal" @close="showModal=false"></modal>
+            <button @click="open" >openModal</button>
         </div>
         
     </div>
@@ -37,6 +37,8 @@ defineProps({
 
 let showModal = ref(false)
 
-
+const open =()=>{
+    showModal.value = ref(true)
+}
 
 </script>
