@@ -2,9 +2,9 @@
     <div>
         <Sidebar></Sidebar>
 
-        <div class="p-4 md:ml-64 flex justify-center items-center h-screen">
+        <div class="p-4 md:ml-64 flex justify-center h-screen">
             <div
-                class="p-12   flex justify-center items-center h-full"
+                class="p-12   flex  items-center h-full"
             >
                 <create-form></create-form>
             </div>

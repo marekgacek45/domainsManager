@@ -1,97 +1,39 @@
 <template>
     <form @submit.prevent="form.post('/domain')" class="max-w-md mx-auto">
         <form-field>
-            <input
-                id="name"
-                type="text"
-                v-model="form.name"
-                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                placeholder=" "
-                required
-            />
-            <label
-                for="name"
-                class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-                >Nazwa</label
-            >
+            <form-label :forHtml="name">Nazwa</form-label>
+            <form-input v-model="form.name" id="name" required />
         </form-field>
         <form-field>
-            <input
-                id="siteUrl"
-                type="text"
-                v-model="form.site_url"
-                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                placeholder=" "
-                required
-            />
-            <label
-                for="siteUrl"
-                class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-                >Adres Strony</label
-            >
+            <form-label :forHtml="siteUrl">Adres strony</form-label>
+            <form-input v-model="form.site_url" id="siteUrl" />
         </form-field>
         <form-field>
-            <input
-                id="host"
-                type="text"
-                v-model="form.host"
-                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                placeholder=" "
-                required
-            />
-            <label
-                for="host"
-                class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-                >Host</label
-            >
+            <form-label :forHtml="host">Host</form-label>
+            <form-input v-model="form.host" id="host" />
         </form-field>
         <form-field>
-            <input
-                id="hostUrl"
-                type="text"
-                v-model="form.host_url"
-                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                placeholder=" "
-                required
-            />
-            <label
-                for="hostUrl"
-                class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-                >Host</label
-            >
+            <form-label :forHtml="hostUrl">Adres Hosta</form-label>
+            <form-input v-model="form.host_url" id="hostUrl" />
         </form-field>
         <form-field>
-            <input
+            <form-label :forHtml="startDate">Data Zakupu</form-label>
+            <form-input
+                v-model="form.start_date"
                 id="startDate"
                 type="date"
-                v-model="form.start_date"
-                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                placeholder=" "
                 required
             />
-            <label
-                for="startDate"
-                class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-                >Data Zakupu</label
-            >
         </form-field>
         <form-field>
-            <input
+            <form-label :forHtml="endDate">Data Zakończenia</form-label>
+            <form-input
+                v-model="form.end_date"
                 id="endDate"
                 type="date"
-                v-model="form.end_date"
-                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                placeholder=" "
                 required
             />
-            <label
-                for="endDate"
-                class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-                >Data Zakończenia</label
-            >
         </form-field>
-        
-      
 
         <button
             type="submit"
@@ -104,6 +46,8 @@
 
 <script setup>
 import FormField from "@/Components/UI/FormField.vue";
+import FormLabel from "@/Components/Forms/Label.vue";
+import FormInput from "@/Components/Forms/Input.vue";
 
 import { useForm } from "@inertiajs/vue3";
 
