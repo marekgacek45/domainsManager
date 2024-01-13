@@ -1,0 +1,3 @@
+<template>
+    <div class="relative z-0 w-full mb-5 group"><slot></slot></div>
+</template>

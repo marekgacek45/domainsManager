@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Inertia\Inertia;
 use App\Models\Domain;
 use Illuminate\Http\Request;
-use Inertia\Inertia;
+use App\Http\Requests\StoreDomainRequest;
 
 class DomainController extends Controller
 {
@@ -29,9 +30,13 @@ class DomainController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreDomainRequest $request)
     {
-        //
+        $data = $request->validated();
+
+        $domain = Domain::create($data);
+
+        return redirect('/');
     }
 
     /**

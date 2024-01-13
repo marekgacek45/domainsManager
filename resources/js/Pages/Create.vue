@@ -2,18 +2,17 @@
     <div>
         <Sidebar></Sidebar>
 
-        <div class="p-4 md:ml-64">
+        <div class="p-4 md:ml-64 flex justify-center items-center h-screen">
             <div
-                class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700"
+                class="p-12   flex justify-center items-center h-full"
             >
-            strona create
+                <create-form></create-form>
             </div>
-          
         </div>
-        
     </div>
 </template>
 
 <script setup>
-import Sidebar from '@/Components/UI/Sidebar.vue';
+import Sidebar from "@/Components/UI/Sidebar.vue";
+import CreateForm from "@/Components/Forms/CreateForm.vue";
 </script>

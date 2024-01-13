@@ -23,7 +23,11 @@ class StoreDomainRequest extends FormRequest
     {
         return [
             'name'=> 'required',
-            
+            'site_url'=> 'required',
+            'host'=> 'required',
+            'host_url'=> 'required',
+            'start_date'=> 'required',
+            'end_date'=> 'required',
         ];
     }
 }

@@ -41,3 +41,4 @@ require __DIR__.'/auth.php';
 
 Route::get('/',[DomainController::class,'index'])->name('dashboard');
 Route::get('/create',[DomainController::class,'create']);
+Route::post('/domain',[DomainController::class,'store']);
